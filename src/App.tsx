@@ -1,10 +1,12 @@
 import Button from "./components/button";
+import Nav from "./components/nav";
 
 function App() {
   return (
-    <>
-      <div>Hello World</div>
-      <section className="flex justify-center items-center w-full gap-2">
+    <main>
+      <Nav />
+      {/*BUTTON*/}
+      <section className="flex justify-center items-center w-full space-x-2 space-y-2">
         <Button variant={"primary"}>primary</Button>
         <Button>default</Button>
         <Button variant={"destructive"}>Cancle</Button>
@@ -13,7 +15,10 @@ function App() {
           Disabled
         </Button>
       </section>
-    </>
+
+      {/*CARD*/}
+      <section></section>
+    </main>
   );
 }
 
