@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-foreground: var(--foreground);
+  --color-destructive: var(--destructive);
+  --color-warning: var(--warning);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-shadow: var(--shadow);
+  --shadow-raised: var(--raised);
+  --shadow-inset: var(--inset);
+  --color-highlight: var(--highlight);
+}
+
+:root {
+  --background: oklch(92% 0.004 286.32);
+  --primary: oklch(51.1% 0.262 276.966);
+  --foreground: oklch(37% 0.013 285.805);
+  --destructive: oklch(57.7% 0.245 27.325);
+  --warning: oklch(64.6% 0.222 41.116);
+  --muted: oklch(87.1% 0.006 286.286);
+  --muted-foreground: oklch(44.2% 0.017 285.786);
+  /*shadow*/
+  --shadow: rgba(0, 0, 0, 0.15);
+  --highlight: var(--color-white);
+  --raised:
+    2px 2px 6px var(--shadow), -2px -2px 6px var(--highlight),
+    inset 0px 0px 0px var(--shadow), inset 0px 0px 0px var(--highlight);
+  --inset:
+    1px 1px 2px var(--shadow), -1px -1px 2px var(--highlight),
+    inset 2px 2px 6px var(--shadow), inset -2px -2px 6px var(--highlight);
+}
+
+.dark {
+  --background: oklch(21% 0.006 285.885);
+  --primary: oklch(67.3% 0.182 276.935);
+  --foreground: oklch(96.7% 0.001 286.375);
+  --shadow: rgba(0, 0, 0, 0.7);
+  --highlight: rgba(255, 255, 255, 0.15);
+  --destructive: oklch(70.4% 0.191 22.216);
+  --warning: oklch(75% 0.183 55.934);
+  --muted: oklch(37% 0.013 285.805);
+  --muted-foreground: oklch(70.5% 0.015 286.067)
+    /*--raised: var();
+  --inset: var();*/;
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
