@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "./components/card";
 import Nav from "./components/nav";
+import NueSwitch from "./components/toggle";
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button>Numbers</Button>
+              <NueSwitch />
             </CardFooter>
           </Card>
         </div>

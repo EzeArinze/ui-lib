@@ -2,7 +2,7 @@ import { mergeProps, useRender } from "@base-ui/react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
-const cardVariants = cva("rounded-2xl border-3 border-border", {
+const cardVariants = cva("rounded-2xl border-3 border-border w-[600px]", {
   variants: {
     variant: {
       raised: "shadow-raised",
