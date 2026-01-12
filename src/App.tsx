@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "./components/card";
 import Nav from "./components/nav";
+import ProgressBar from "./components/progress-bar";
 import NueSlider from "./components/slider";
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
 
             <CardContent>
               <ul>
-                {[...Array(6)].map((_, i) => (
+                {[...Array(4)].map((_, i) => (
                   <li key={i}>{i + 1}</li>
                 ))}
               </ul>
@@ -46,6 +47,31 @@ function App() {
             <CardFooter className="space-x-2">
               <NueSlider defaultValue={25} />
             </CardFooter>
+          </Card>
+        </div>
+
+        <div className="mx-2 mt-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>
+                <h1>Progress bar</h1>
+              </CardTitle>
+              <CardDescription>
+                <p>Simple vertcal/horizontal bar</p>
+              </CardDescription>
+            </CardHeader>
+
+            <CardContent className="space-y-4 flex gap-4 h-36">
+              <ProgressBar value={15} max={100} orientation={"vertical"} />
+              <ProgressBar value={25} orientation={"vertical"} />
+              <ProgressBar value={55} orientation={"vertical"} />
+            </CardContent>
+            <CardContent className="space-y-4 ">
+              <ProgressBar value={15} max={100} />
+              <ProgressBar value={25} />
+              <ProgressBar value={55} />
+            </CardContent>
+            <CardFooter className="space-x-2"></CardFooter>
           </Card>
         </div>
       </section>
