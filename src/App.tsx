@@ -1,3 +1,4 @@
+import Badge from "./components/badge";
 import Button from "./components/button";
 import {
   Card,
@@ -74,6 +75,10 @@ function App() {
             <CardFooter className="space-x-2"></CardFooter>
           </Card>
         </div>
+
+        <Badge variant={"primary"}>Welcome</Badge>
+        <Badge variant={"warning"}>Carefull</Badge>
+        <Badge variant={"destructive"}>Danger</Badge>
       </section>
     </main>
   );

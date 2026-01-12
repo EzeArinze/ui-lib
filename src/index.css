@@ -15,7 +15,6 @@
   --shadow-inset: var(--inset);
   --color-highlight: var(--highlight);
   --color-border: var(--border);
-  --color-edge: var(--edge);
 }
 
 :root {
@@ -28,16 +27,15 @@
   --muted-foreground: oklch(44.2% 0.017 285.786);
   /*shadow*/
   --shadow: rgba(0, 0, 0, 0.2);
-  --highlight: var(--color-white);
+  --highlight: rgba(255, 255, 255, 1);
   --raised:
     2px 2px 6px var(--shadow), -2px -2px 6px var(--highlight),
     inset 0px 0px 0px var(--shadow), inset 0px 0px 0px var(--highlight),
-    inset 1px 1px 2px var(--edge);
+    inset 1px 1px 2px var(--highlight), inset -1px -1px 2px var(--shadow);
   --inset:
     1px 1px 2px var(--shadow), -1px -1px 2px var(--highlight),
     inset 2px 2px 6px var(--shadow), inset -2px -2px 6px var(--highlight);
-  --border: var(--color-zinc-100);
-  --edge: rgba(255, 255, 255, 0.1);
+  --border: var(--color-zinc-200);
 }
 
 .dark {
@@ -51,7 +49,6 @@
   --muted: oklch(37% 0.013 285.805);
   --muted-foreground: oklch(70.5% 0.015 286.067);
   --border: var(--color-zinc-950);
-  /*--edge: rgba(255, 255, 255, 0.1);*/
 }
 
 @layer base {
