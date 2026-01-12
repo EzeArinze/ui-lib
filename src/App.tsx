@@ -7,8 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from "./components/card";
+import CheckBox from "./components/checkbox";
 import Nav from "./components/nav";
-import NueSwitch from "./components/toggle";
+import NueSwitch from "./components/switch";
 
 function App() {
   return (
@@ -43,8 +44,9 @@ function App() {
                 ))}
               </ul>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="space-x-2">
               <NueSwitch />
+              <CheckBox defaultChecked disabled />
             </CardFooter>
           </Card>
         </div>
