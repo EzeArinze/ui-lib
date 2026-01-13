@@ -11,6 +11,13 @@ import Input from "./components/input";
 import Nav from "./components/nav";
 import ProgressBar from "./components/progress-bar";
 import NueSlider from "./components/slider";
+import {
+  NueTabs,
+  Tab,
+  TabsIndicator,
+  TabsList,
+  TabsPanels,
+} from "./components/tabs";
 
 function App() {
   return (
@@ -72,8 +79,21 @@ function App() {
               <ProgressBar value={25} />
               <ProgressBar value={55} />
             </CardContent>
-            <CardFooter className="space-x-2">
+            <CardFooter className="space-x-2 space-y-2">
               <Input placeholder="Full Name" />
+
+              <NueTabs>
+                <TabsList>
+                  <Tab value={"name"}>Name</Tab>
+                  <Tab value={"age"}>Age</Tab>
+                  <Tab value={"work"}>Work</Tab>
+                  <TabsIndicator />
+                </TabsList>
+
+                <TabsPanels value={"name"}>Arinze</TabsPanels>
+                <TabsPanels value={"age"}>26</TabsPanels>
+                <TabsPanels value={"work"}>Developer</TabsPanels>
+              </NueTabs>
             </CardFooter>
           </Card>
         </div>
