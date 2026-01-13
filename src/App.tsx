@@ -1,4 +1,3 @@
-import Badge from "./components/badge";
 import Button from "./components/button";
 import {
   Card,
@@ -8,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./components/card";
+import Input from "./components/input";
 import Nav from "./components/nav";
 import ProgressBar from "./components/progress-bar";
 import NueSlider from "./components/slider";
@@ -72,13 +72,11 @@ function App() {
               <ProgressBar value={25} />
               <ProgressBar value={55} />
             </CardContent>
-            <CardFooter className="space-x-2"></CardFooter>
+            <CardFooter className="space-x-2">
+              <Input placeholder="Full Name" />
+            </CardFooter>
           </Card>
         </div>
-
-        <Badge variant={"primary"}>Welcome</Badge>
-        <Badge variant={"warning"}>Carefull</Badge>
-        <Badge variant={"destructive"}>Danger</Badge>
       </section>
     </main>
   );
