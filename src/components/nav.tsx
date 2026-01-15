@@ -15,7 +15,9 @@ function Nav() {
 
   return (
     <nav className="py-8 px-12 flex items-center justify-between">
-      <h1 className="font-bold">Ui-Neo</h1>
+      <h1 className="font-semibold shadow-inset p-2 rounded-lg hover:shadow-raised leading-tight">
+        NEO-UI
+      </h1>
       <Button
         variant="default"
         size={"icon"}

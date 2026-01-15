@@ -45,8 +45,8 @@ export default function Button(props: ButtonProps) {
           size: props.size,
           shape: props.shape,
         }),
-        props.className,
       ),
+      tabIndex: 0,
     },
     otherProps,
   );
